@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        function getRndPosition() {
+            var a = getRandomInt(-800, 1000);
+            var b = getRandomInt(1, 500);
+
+            document.getElementById("NO").style.left = a + 'px';
+            document.getElementById("NO").style.top = b + 'px';
+        }
+        
+        function getYes() {
+            alert("Мы рады, что вы довольны! )))");
+        }
+        
+    </script>
+    <title>Document</title>
+    <style>
+        .container {
+            width: 1500px;
+            height: 500px;
+            background-color: red;
+        }
+
+        .text {
+            width: 1000px;
+            height: 150px;
+            background-color: rgb(171, 184, 171);
+            font-family: Comic Sans MS;
+            font-size: 40pt;
+            font-weight: 700;
+            text-align: center;
+            vertical-align: middle;
+            margin-left: 15%;
+        }
+        .NO {
+            z-index: 3;
+            width: 500px;
+            height: 55px;
+            position: relative;
+            left: 220px;
+            top: 0px;
+        }
+        
+        .YES {
+            width: 500px;
+            height: 55px;
+            position: relative;
+            left: 15%;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">Вы довольны своей зарплатой?</div>
+    
+    <input type="button" class="YES" value="YES" onclick="getYes()">
+    <input id="NO" class="NO" type="button" value="NO" onmouseover="getRndPosition()">
+</div>
+</body>
+</html>
